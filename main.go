@@ -9,6 +9,7 @@ import (
 )
 //? is used to launch the server in local
 func main() {
+	getApi()
 	
 	http.Handle("/", http.FileServer(http.Dir("./view/html")))
 
