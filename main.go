@@ -9,7 +9,7 @@ import (
 )
 //? is used to launch the server in local
 func main() {
-	getApi()
+	//getApi()
 	
 	http.Handle("/", http.FileServer(http.Dir("./view/html")))
 
@@ -20,7 +20,7 @@ func main() {
 	}
 }
 //* this function allow a URL path to a html file.
-func IndexHandler(w http.ResponseWriter, req *http.Request) {
+func indexHandler(w http.ResponseWriter, req *http.Request) {
 	tmpl, err := template.ParseGlob("templates/*")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
