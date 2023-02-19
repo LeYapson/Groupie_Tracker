@@ -80,9 +80,21 @@
               Artists
             </h1>
         </div>
-
+        
       </div>
       <!-- Content wrapper end -->
+      <ul>
+        {{range .}}
+          <li><img src="{{.Image}}" alt="logo"><br>  
+            Artist {{.Id}}: {{.Name}} ({{.CreationDate}})<br>
+            Members : {{.Members}}<br>
+            First Album : {{.FirstAlbum}}<br>
+            Locations :<a href="{{.Locations}}" class="dropdown-item">Location</a><br>
+            Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
+            Relations :<a href="{{.Relations}}" class="dropdown-item">Relation</a><br>
+          --------------------------------------------------- </li>
+        {{end}}
+        </ul>
     </div>
     <!-- Page wrapper end -->
 

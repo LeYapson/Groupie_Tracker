@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
-//? is used to launch the server in local
 func main() {
-
 	http.Handle("/", http.FileServer(http.Dir("./view/html")))
-
-	fmt.Println("[INFO] - Starting the server...")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		fmt.Println("[ERROR] - Server could not start properly.\n ", err)
-	}
+	http.HandleFunc("/artist.html", handleArtist)
+	http.HandleFunc("/location.html",handleLocation)
+	//http.HandleFunc("/date.html", handleDate)
+	//http.HandleFunc("/relation.html", handleRelation)
+	fmt.Println("server starting at port 8080.")
+	log.Fatal(http.ListenAndServe(":8080", nil))
+	
 }
