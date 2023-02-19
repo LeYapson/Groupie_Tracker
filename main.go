@@ -1,17 +1,18 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	/*"fmt"
 	"html/template"
+	"net/http"
 	"path"
-	"time"
+	"time"*/
 )
+
 //? is used to launch the server in local
 func main() {
-	//getApi()
-	
-	http.Handle("/", http.FileServer(http.Dir("./view/html")))
+	getArtistsApi()
+
+	/*http.Handle("/", http.FileServer(http.Dir("./view/html")))
 
 	fmt.Println("[INFO] - Starting the server...")
 	err := http.ListenAndServe(":8080", nil)
@@ -19,6 +20,7 @@ func main() {
 		fmt.Println("[ERROR] - Server could not start properly.\n ", err)
 	}
 }
+
 //* this function allow a URL path to a html file.
 func indexHandler(w http.ResponseWriter, req *http.Request) {
 	tmpl, err := template.ParseGlob("templates/*")
@@ -43,6 +45,5 @@ func indexHandler(w http.ResponseWriter, req *http.Request) {
 	if err := tmpl.ExecuteTemplate(w, name, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		fmt.Println("error", err)
-	}
+	}*/
 }
-
