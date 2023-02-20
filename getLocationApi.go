@@ -10,14 +10,15 @@ import (
 )
 
 type Location struct {
-Id int
-Locations []string
-ConcertDates string
+	Id           int
+	Locations    []string
+	ConcertDates string
 }
+
 //! ON A UN PB CHEF PAR ICI
 //? this function reads the location API from a local file and prints the relevant information
 func handleLocation(w http.ResponseWriter, r *http.Request) {
-	locations, err := getLocation("./data/location.json")
+	locations, err := getLocation("./data/locations.json")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

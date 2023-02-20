@@ -9,7 +9,6 @@ import (
 	"os"
 )
 
-
 type Artist struct {
 	Id           int
 	Image        string
