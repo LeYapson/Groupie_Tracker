@@ -34,7 +34,7 @@ type Date struct {
 
 type Relation struct {
 	Id int
-	Dateslocations []string
+	Dateslocations string
 }
 
 //? this function reads the artists API from a local file and prints the relevant information
