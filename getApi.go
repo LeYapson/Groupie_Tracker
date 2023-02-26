@@ -185,7 +185,7 @@ func getDates(filePath string) ([]Date, error) {
 	return dates, nil
 }
 
-//!---------------------------------------------------------------------------------------------
+//!------PROBLEME HERE CHEF---------------------------------------------------------------------------------------
 
 //? this function reads the relation API from a local file and prints the relevant information
 func handleRelation(w http.ResponseWriter, r *http.Request) {
