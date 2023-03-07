@@ -36,7 +36,7 @@ func handleArtist(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//* Executes the template by passing the artists' data
-	err = tmpl.Execute(w, artists)
+	tmpl.Execute(w, artists)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -60,7 +60,7 @@ func getArtists(filePath string) ([]Artist, error) {
 
 	//* Decoding JSON content in an Artist slice
 	var artists []Artist
-	err = json.Unmarshal(content, &artists)
+	json.Unmarshal(content, &artists)
 	if err != nil {
 		return nil, fmt.Errorf("erreur lors du décodage du JSON : %w", err)
 	}
