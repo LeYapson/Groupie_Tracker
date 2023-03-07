@@ -20,7 +20,7 @@ type Artist struct {
 	Relations    string
 }
 
-//? this function reads the artists API from website and prints the relevant information
+// ? this function reads the artists API from website and prints the relevant information
 func handleArtist(w http.ResponseWriter, r *http.Request) {
 	artists, err := getArtists("https://groupietrackers.herokuapp.com/api/artists")
 	if err != nil {
@@ -43,7 +43,7 @@ func handleArtist(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//* Get the artists from the API
+// * Get the artists from the API
 func getArtists(filePath string) ([]Artist, error) {
 	//* Opening the JSON page online
 	resp, err := http.Get(filePath)
