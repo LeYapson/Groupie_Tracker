@@ -9,15 +9,15 @@ import (
 )
 
 type Artist struct {
-	Id            int
-	Image         string
-	Name          string
-	Members       []string
-	CreationDate  int
-	FirstAlbum    string
-	Locations     string
-	ConcertDates  string
-	Relations     string
+	Id           int
+	Image        string
+	Name         string
+	Members      []string
+	CreationDate int
+	FirstAlbum   string
+	Locations    string
+	ConcertDates string
+	Relations    string
 }
 
 //? this function reads the artists API from website and prints the relevant information
@@ -64,6 +64,5 @@ func getArtists(filePath string) ([]Artist, error) {
 	if err != nil {
 		return nil, fmt.Errorf("erreur lors du décodage du JSON : %w", err)
 	}
-
 	return artists, nil
 }
