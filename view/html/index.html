@@ -23,7 +23,16 @@
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
   <!-- Modals go here -->
   <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
-
+  <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-content-media w-500"> <!-- w-500 = width: 50rem (500px) -->
+        <a href="#" class="close" role="button" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+        <img src="BoBDell.jpg" class="img-fluid" alt="modal-img">
+      </div>
+    </div>
+  </div>
   <!-- Page wrapper start -->
   <div class="page-wrapper with-navbar with-sidebar">
 
@@ -34,7 +43,7 @@
     <!-- Navbar start -->
     <nav class="navbar">
       <!-- Navbar brand -->
-      <a href="https://www.youtube.com/shorts/BPMoXJ0ex4w" class="navbar-brand">
+      <a href="https://www.youtube.com/watch?v=9WXtYaHr58k" class="navbar-brand">
         <img src="logo.png" alt="logo">
         Groupie-Tracker
       </a>
@@ -43,6 +52,8 @@
       <span class="navbar-text text-monospace">v0.5</span>
 
       <a href="artist.html" class="dropdown-item">Artists</a>
+
+      <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
 
       <button class="btn" type="button" onclick="toastAlert()">XTREM Dark mode</button>
       <!-- JavaScript -->
